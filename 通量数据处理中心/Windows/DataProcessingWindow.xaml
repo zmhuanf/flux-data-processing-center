@@ -1,0 +1,47 @@
+﻿<Window x:Class="通量数据处理中心.Windows.DataProcessingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:通量数据处理中心.Windows"
+        mc:Ignorable="d"
+        Title="数据处理" Height="600" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Row="0" Grid.ColumnSpan="2" FontSize="14">
+            <MenuItem Header="文件">
+                <MenuItem Header="保存"/>
+            </MenuItem>
+            <MenuItem Header="工具">
+                <MenuItem Header="暂时留空"/>
+            </MenuItem>
+        </Menu>
+        
+        <!-- 暂时未实现（动态加载部分） -->
+        <!-- <DataGrid Grid.Row="1" Grid.Column="0" x:Name="DataGrid" AutoGenerateColumns="True" Margin="10" ScrollViewer.ScrollChanged="DataGrid_ScrollChanged"
+                  EnableRowVirtualization="True" EnableColumnVirtualization="True">
+            <DataGrid.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </DataGrid.ItemsPanel>
+        </DataGrid> -->
+        
+        <DataGrid Grid.Row="1" Grid.Column="0" x:Name="DataGrid" AutoGenerateColumns="True" Margin="10">
+        </DataGrid>
+
+        <!-- 在这里添加按钮，位于右侧固定宽度为200像素的区域 -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="10">
+            <Button Content="按钮1" Width="180" Height="30" Margin="0,0,0,10"/>
+            <Button Content="按钮2" Width="180" Height="30" Margin="0,0,0,10"/>
+        </StackPanel>
+    </Grid>
+</Window>

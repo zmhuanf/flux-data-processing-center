@@ -1,0 +1,28 @@
+﻿<Window x:Class="通量数据处理中心.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:通量数据处理中心"
+        mc:Ignorable="d"
+        Title="通量数据处理中心" Height="375" Width="300" AllowDrop="True" Drop="Grid_Drop" DragOver="Grid_DragOver" ResizeMode="CanMinimize">
+    <Grid>
+        <Menu Grid.Row="0" FontSize="14">
+            <MenuItem Header="文件">
+                <MenuItem Header="打开" Click="Open_Click"/>
+                <Separator/>
+                <MenuItem Header="退出"/>
+            </MenuItem>
+            <MenuItem Header="帮助">
+                <MenuItem Header="关于"/>
+            </MenuItem>
+        </Menu>
+        <Border BorderBrush="Gray" BorderThickness="1" Margin="10,34,10,0" VerticalAlignment="Top" Height="146" Padding="5">
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="DynamicLoading" Content="启用动态加载（在载入大文件时勾选）" Margin="5,0,0,0"/>
+            </StackPanel>
+        </Border>
+        <Label Content="将文件拖入打开文件" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="0,238,0,0" Foreground="Gray"/>
+
+    </Grid>
+</Window>
